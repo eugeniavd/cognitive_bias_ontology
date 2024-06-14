@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#"
+     xml:base="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:fs="https://w3id.org/framester/data/framestercore/"
+     xmlns:brf="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#"
+     xmlns:cbi="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:exob="https://modellingdh.github.io/ont/odp/term/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:actspec="http://ontology.eil.utoronto.ca/icity/ActivitySpecification/"
+     xmlns:reaction="http://www.ontologydesignpatterns.org/cp/owl/reaction.owl.v0.1#"
+     xmlns:parameter="http://ontologydesignpatterns.org/cp/owl/parameter.owl#"
+     xmlns:parameter1="http://ontologydesignpatterns.org/cp/owl/parameter.owlhas#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#">
+        <dc:creator xml:lang="en">Rana Coskun</dc:creator>
+        <rdfs:comment xml:lang="en">The base rate fallacy is a cognitive error whereby people incorrectly judge the likelihood of an event due to ignoring or underestimating the base rate (i.e., the overall rate at which an event occurs) and overemphasizing specific information. This fallacy can occur in various contexts, such as assessing risks, making medical diagnoses, and evaluating probabilities in legal and everyday situations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Base Rate Fallacy</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Experience_%26_Observation</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">http://ontologydesignpatterns.org/wiki/Submissions:Parameter</rdfs:seeAlso>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://ontologydesignpatterns.org/cp/owl/parameter.owl#hasParameter">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRateInformation"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate"/>
+        <rdfs:comment xml:lang="en">A Concept can have a Parameter that constrains the attributes that a classified Entity can have in a certain Situation</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/cp/owl/parameter.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasParameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/hasEngagement -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/hasEngagement">
+        <owl:inverseOf rdf:resource="https://modellingdh.github.io/ont/odp/term/inActivity"/>
+        <rdfs:comment xml:lang="en">inverse of inActivity</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasEngagement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/inActivity -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/inActivity">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Assessing"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
+        <rdfs:comment xml:lang="en">what activity/ies are affecting or affected by a certain engagement</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">inActivity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/includes -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/includes">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
+        <rdfs:range rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <rdfs:comment xml:lang="en">A relation of mereological nature that connects a given observation with the activity that originates them: it strengthens the argument that observations are always active processes from a cognitive standpoint, regardless of how conscious they may be. A standard mereological property from another content pattern may be used in lieu of this one and therefore aligned with it.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">includes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/isEngagedIn -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/isEngagedIn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Assessing"/>
+        <rdfs:comment xml:lang="en">Because an activity may engage other participants than the one performing it, engagements are in general considered individual rather than collective, therefore each participants has their own engagement and only some of them will be conscious and/or documented.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isEngagedIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/isReflectedUponIn -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/isReflectedUponIn">
+        <owl:inverseOf rdf:resource="https://modellingdh.github.io/ont/odp/term/isReflectionOn"/>
+        <rdfs:comment xml:lang="en">Inverse of isReflectionOf</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isReflectedUponIn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/isReflectionOn -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/isReflectionOn">
+        <rdfs:domain rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Assessing"/>
+        <rdfs:comment xml:lang="en">Used to connect the subjective elements of an experience with the corresponding observation, which is extrapolated from the content being interacted with and in itself may not be including a critique.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isReflectionOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/producesObservation -->
+
+    <owl:ObjectProperty rdf:about="https://modellingdh.github.io/ont/odp/term/producesObservation">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#SpecificInformation"/>
+        <rdfs:range rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <rdfs:comment xml:lang="en">This property can be used to denote that something is (even indirectly, not necessary through direct reflection) responsible for the existence of an observation</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">producesObservation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#isBasedOn -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#isBasedOn">
+        <rdfs:domain rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
+        <rdfs:range rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
+        <rdfs:comment xml:lang="en">Links a decision-making activity to the information from which it is derived or based.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#isBasedOn</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isBasedOn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects">
+        <owl:inverseOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy"/>
+        <rdfs:comment xml:lang="en">inverse of isAffectedBy</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#affects</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">affects</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy"/>
+        <rdfs:comment xml:lang="en">Describes the relationship between a cognitive bias and an individual on the base of influence.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#isAffectedBy</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">isAffectedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontologydesignpatterns.org/cp/owl/parameter.owlhas#ParameterDataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://ontologydesignpatterns.org/cp/owl/parameter.owlhas#ParameterDataValue">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Parametrizes values from a datatype</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://ontologydesignpatterns.org/cp/owl/parameter.owl</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">hasParameterDataValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://modellingdh.github.io/ont/odp/term/Observation -->
+
+    <owl:Class rdf:about="https://modellingdh.github.io/ont/odp/term/Observation">
+        <rdfs:comment xml:lang="en">The product of an act of scrutiny which may or may not have been performed with a critical disposition</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://modellingdh.github.io/ont/odp/term/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Observation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate">
+        <rdfs:comment xml:lang="en">Base rate refers to the parameter that Base Rate Information has</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BaseRate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRateInformation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRateInformation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
+        <owl:disjointWith rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#SpecificInformation"/>
+        <rdfs:comment xml:lang="en">Base rate information refers to the type of information that is the percentage of a population that has a specific characteristic</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRateInformation</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BaseRateInformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#SpecificInformation -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#SpecificInformation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
+        <rdfs:comment xml:lang="en">Specific information refers to the type of information that is case-specific</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#SpecificInformation</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">SpecificInformation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias"/>
+        <rdfs:comment xml:lang="en">The base rate fallacy illustrates how neglecting the overall context or base rate information can lead to inaccurate perceptions and decisions.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BaseRateFallacy</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BaseRateFallacy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/framester/data/framestercore/People"/>
+        <rdfs:comment xml:lang="en">Represents an entity that experiences the bias.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">BiasedAgent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias">
+        <rdfs:comment xml:lang="en">Represents the overarching concept of cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#CognitiveBias</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">CognitiveBias</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Assessing -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Assessing">
+        <rdfs:comment xml:lang="en">An Assessor examines a Phenomenon to figure out its Value according to some Feature of the Phenomenon. This Value is a factor in determining the acceptability of the Phenomenon.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/Assessing</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Assessing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Deciding -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Deciding">
+        <rdfs:comment xml:lang="en">A Cognizer makes a Decision, which may be about an entity or a course of action.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/Deciding</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Deciding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/Information -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/Information">
+        <rdfs:comment xml:lang="en">A Cognizer knows or comes to know some piece of Information about a Topic. In this frame, many LUs encode a specific Means_of_Gathering and/or Source, but these may also be expressed separately</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/framester/data/framestercore/Information</rdfs:isDefinedBy>
+        <rdfs:label>Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/framester/data/framestercore/People -->
+
+    <owl:Class rdf:about="https://w3id.org/framester/data/framestercore/People">
+        <rdfs:comment xml:lang="en">Denotes a human being and express that we are talking about human cognitive biases.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/framester/data/framestercore/People</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">People</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DiseaseBaseRateInformation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DiseaseBaseRateInformation">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRateInformation"/>
+        <parameter:hasParameter rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#Rate"/>
+        <rdfs:comment xml:lang="en">Information regarding the prevalence of a specific disease within a population proving that the result might be a false positive, used as a base rate for evaluation purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Disease Base Rate Information</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DrLee -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#DrLee">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/cbi.owl#BiasedAgent"/>
+        <exob:isEngagedIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease"/>
+        <rdfs:comment xml:lang="en">A physician involved in the assessment of disease likelihood, potentially affected by cognitive biases such as the base rate fallacy</rdfs:comment>
+        <rdfs:label xml:lang="en">Dr Lee</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Assessing"/>
+        <exob:inActivity rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#MakingDiagnosis"/>
+        <exob:isReflectedUponIn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation"/>
+        <rdfs:comment xml:lang="en">The process of determining the probability that a patient has a specific disease based true positive observation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Evaluating Likelihood Of Disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#InformationRegardingDisease -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#InformationRegardingDisease">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Information"/>
+        <rdfs:comment xml:lang="en">General information about a disease, which includes statistical data and base rates pertinent to its occurrence in a population.</rdfs:comment>
+        <rdfs:label xml:lang="en">Information Regarding Disease</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#MakingDiagnosis -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#MakingDiagnosis">
+        <rdf:type rdf:resource="https://w3id.org/framester/data/framestercore/Deciding"/>
+        <exob:hasEngagement rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease"/>
+        <exob:includes rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation"/>
+        <isBasedOn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#InformationRegardingDisease"/>
+        <rdfs:comment xml:lang="en">The decision-making process involved in diagnosing a patient, which considers both base rate information and specific case details.</rdfs:comment>
+        <rdfs:label xml:lang="en">Making Diagnosis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#Rate -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#Rate">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#BaseRate"/>
+        <parameter1:ParameterDataValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.002</parameter1:ParameterDataValue>
+        <rdfs:comment xml:lang="en">Rate of disease within the population</rdfs:comment>
+        <rdfs:label xml:lang="en">Rate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TestResult -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TestResult">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#SpecificInformation"/>
+        <exob:producesObservation rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation"/>
+        <rdfs:comment xml:lang="en">The information regarding that test result is positive and highly accurate, with a 99% chance of a positive result if you have the disease.</rdfs:comment>
+        <rdfs:label xml:lang="en">Test Result</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#TruePositiveObservation">
+        <rdf:type rdf:resource="https://modellingdh.github.io/ont/odp/term/Observation"/>
+        <exob:isReflectionOn rdf:resource="https://raw.githubusercontent.com/ranacoskun/cognitive_bias_ontology/main/BaseRateFallacy/baseratefallacy.owl#EvaluatingLikelihoodOfDisease"/>
+        <rdfs:comment xml:lang="en">The observation that the test is a true positive based on the test result (specific information), often reflecting on the evaluation of the disease likelihood.</rdfs:comment>
+        <rdfs:label xml:lang="en">True Positive Observation</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
